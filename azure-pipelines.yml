@@ -21,15 +21,5 @@ steps:
     version: 2.x
     installationPath: $(Agent.ToolsDirectory)/dotnet
     
-- task: Bash@3
-  inputs:
-    targetType: 'inline' # Optional. Options: filePath, inline
-    #filePath: # Required when targetType == FilePath
-    #arguments: # Optional
-    script: 'curl -fL https://getcli.jfrog.io | sh' # Required when targetType == inline
-    #workingDirectory: # Optional
-    #failOnStderr: false # Optional
-    #noProfile: true # Optional
-    #noRc: true # Optional    
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
