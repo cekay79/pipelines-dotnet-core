@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: 'mcossl'
+  name: 'linux_rhel_mcos'
 
 variables:
   buildConfiguration: 'Release'
